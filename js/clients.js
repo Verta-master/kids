@@ -1,4 +1,4 @@
-//Catalog slider
+//Clients slider
 var breakpoint2 = window.matchMedia('(min-width: 1200px)');
 var newsSwiper2;
 var breakpointChecker2 = function() {
@@ -11,7 +11,7 @@ var breakpointChecker2 = function() {
 };
 
 var enableSwiper2 = function() {
-  newsSwiper2 = new Swiper ('.catalog__slider', {
+  newsSwiper2 = new Swiper ('.clients__slider', {
     simulateTouch: false,
     preventClicks: false,
     preventClicksPropagation: false,

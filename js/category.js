@@ -1,4 +1,4 @@
-//Company slider
+//Category slider
 var breakpoint2 = window.matchMedia('(min-width: 1200px)');
 var newsSwiper2;
 var breakpointChecker2 = function() {

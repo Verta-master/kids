@@ -1,0 +1,157 @@
+.footer {
+  background-color: #fff;
+}
+
+.footer__top,
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom {
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #8695AD;
+  font-size: 14px;
+  line-height: 1.2;
+  border-top: 1px solid rgba(134,149,173,0.1);
+}
+
+.footer__top {
+  padding-top: 56px;
+  padding-bottom: 55px;
+}
+
+.footer__logo {
+  max-width: 285px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #8695AD;
+  
+  .logo img {
+    margin-bottom: 20px;
+  }
+  
+  .logo strong {
+    margin-bottom: 18px;
+  }
+  
+  .payment {
+    margin-top: 35px;
+  }
+}
+
+.footer__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.footer__menu {
+  .reset();
+  list-style: none;
+}
+
+.footer__item {
+  margin-bottom: 20px;
+  
+  a {
+    display: block;
+    color: #8695AD;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1;
+    .transition();
+    
+    &:hover,
+    &:active {
+      color: #33344E;
+      .transition();
+    }
+  }
+}
+
+.footer__contacts {
+  width: 180px;
+}
+
+.footer__call {
+  width: 180px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 55px;
+  padding-left: 17px;
+  padding-top: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #269CED;
+  border-radius: 10px;
+  background-image: url(../img/icons/phone.svg);
+  background-repeat: no-repeat;
+  background-size: 12px 11px;
+  background-position: left 15px center;
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: rgba(38,156,237,0.8);
+    .transition();
+  }
+}
+
+.footer__address {
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  
+  b {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  
+  &--location b::before {
+    width: 13px;
+    height: 15px;
+    background-image: url(../img/icons/address.svg);
+  }
+  
+  &--email b::before {
+    width: 14px;
+    height: 15px;
+    background-image: url(../img/icons/email.svg);
+  }
+  
+  address,
+  a {
+    color: #8695AD;
+  }
+  
+  a:hover,
+  a:active {
+    color: #33344E;
+    text-decoration: underline;
+  }
+}
