@@ -85,6 +85,7 @@
           </li>
         </ul>
       </div>
+      <button type="button" class="menu__btn"></button>
       <ul class="menu__list">
         <li class="menu__item menu__item--active">
           <a href="#" class="menu__link">Главная</a>
@@ -774,6 +775,11 @@
       preventClicksPropagation: false,
       slidesPerView: 2,
       spaceBetween: 30,
+      breakpoints: {
+        766: {
+          slidesPerView: 1,
+        }
+      }
     });
   </script>
 </body>
