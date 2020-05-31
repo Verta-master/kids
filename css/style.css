@@ -1994,8 +1994,10 @@ h2,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 219px;
-  margin-bottom: 60px;
   border-top: 1px solid rgba(170, 173, 179, 0.2);
   border-bottom: 1px solid rgba(170, 173, 179, 0.2);
   border-radius: 20px;
@@ -2047,7 +2049,7 @@ h2,
 .form__value {
   display: block;
   width: 135px;
-  height: 42px;
+  height: 50px;
   font-weight: bold;
   font-size: 22px;
   line-height: 1;
@@ -2278,6 +2280,7 @@ h2,
 .card__slider {
   width: 770px;
   padding: 30px;
+  padding-bottom: 25px;
   background: #FFFFFF;
   border: 1px solid rgba(134, 149, 173, 0.1);
   border-radius: 30px;
@@ -2293,19 +2296,21 @@ h2,
 .card__title {
   margin-top: 0;
   margin-bottom: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   font-weight: 800;
   font-size: 28px;
   line-height: 1.3;
   border-bottom: 1px solid rgba(134, 149, 173, 0.2);
 }
 .card__subtitle {
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
 }
 .card__price {
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 18px;
   font-weight: 800;
   font-size: 40px;
   line-height: 1.2;
@@ -2327,7 +2332,7 @@ h2,
 }
 .gallery-top {
   height: 328px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .card__slide {
   height: auto;
@@ -2358,7 +2363,7 @@ h2,
   padding-right: 105px;
 }
 .card__thumb {
-  height: 75px;
+  height: 83px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2378,7 +2383,7 @@ h2,
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  max-height: 67px;
+  max-height: 75px;
 }
 .gallery-thumbs .swiper-slide-thumb-active {
   border-color: #269CED;
@@ -2394,8 +2399,8 @@ h2,
   right: 0;
 }
 .breadcrumbs {
-  padding-top: 25px;
-  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 .breadcrumbs__link {
   display: inline-block;
@@ -2420,6 +2425,76 @@ a.breadcrumbs__link:active {
 }
 span.breadcrumbs__link {
   color: #269CED;
+}
+.tabs__block {
+  margin-bottom: 30px;
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px solid rgba(134, 149, 173, 0.1);
+  border-radius: 30px;
+}
+.tabs__title {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.tabs__title .ui-tabs-active a {
+  color: #fff;
+  background-color: #33344E;
+}
+.tabs__name {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.tabs__name a {
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px 22px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  color: #33344E;
+  border-radius: 25px;
+}
+.tabs__field p {
+  margin-bottom: 20px;
+}
+.related {
+  margin-bottom: 40px;
+  padding-top: 13px;
+  padding-bottom: 0;
+}
+.related .catalog__slide {
+  margin: 0;
+}
+.related__slider {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.related__prev {
+  left: -70px;
+}
+.related__next {
+  right: -70px;
+}
+@media (max-width: 1400px) {
+  .related__prev {
+    left: -15px;
+  }
+  .related__next {
+    right: -15px;
+  }
 }
 @media (max-width: 1200px) {
   .wrapper {

@@ -218,10 +218,10 @@
       </div>
     </section>
     
-    <section class="catalog">
+    <section class="catalog related">
       <div class="wrapper">
         <p class="title">Похожие товары</p>
-        <div class="swiper-container catalog__slider">
+        <div class="swiper-container related__slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide catalog__slide">
               <div class="catalog__labels">
@@ -489,8 +489,8 @@
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev catalog__prev"></div>
-        <div class="swiper-button-next catalog__next"></div>        
+        <div class="swiper-button-prev related__prev"></div>
+        <div class="swiper-button-next related__next"></div>        
       </div>
     </section>
     
@@ -634,6 +634,7 @@
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
   <!-- Sliders -->
   <script>
@@ -655,25 +656,34 @@
       }
     });
     
-    var mySwiper = new Swiper ('.action__slider', {
-      pagination: {
-        el: '.action__pagination',
-        clickable: true,
-      },
+    var mySwiper = new Swiper ('.related__slider', {
       navigation: {
-        nextEl: '.action__next',
-        prevEl: '.action__prev',
+        nextEl: '.related__next',
+        prevEl: '.related__prev',
       },
       simulateTouch: false,
       preventClicks: false,
       preventClicksPropagation: false,
-      slidesPerView: 2,
-      spaceBetween: 30,
+      slidesPerView: 4,
+      spaceBetween: 16,
       breakpoints: {
-        766: {
+        1200: {
+          slidesPerView: 3,
+        },
+        1022: {
+          slidesPerView: 2,
+        },
+        600: {
           slidesPerView: 1,
         }
       }
+    });
+  </script>
+  
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
     });
   </script>
 </body>
