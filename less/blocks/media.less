@@ -1,0 +1,117 @@
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+  .blog__slider .swiper-wrapper,
+  .clients__slider .swiper-wrapper,
+  .catalog__slider .swiper-wrapper,
+  .category__slider .swiper-wrapper {
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  .blog__next,
+  .blog__prev,
+  .clients__next,
+  .clients__prev,
+  .catalog__next,
+  .catalog__prev,
+  .category__next,
+  .category__prev {
+    display: block;
+  }
+  .swiper-button-prev {
+    left: 5px;
+  }
+  .swiper-button-next {
+    right: 5px;
+  }
+  .blog__slide,
+  .clients__slide,
+  .catalog__slide,
+  .category__slide {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .blog__slider,
+  .clients__slider,
+  .catalog__slider,
+  .category__slider {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .search__input {
+    width: 150px;
+    padding: 0 10px;
+  }
+}
+
+//-------------------------------------
+@media (max-width: 1022px) {
+  .action__link {
+    padding: 30px;
+  }
+  .action__title {
+    font-size: 48px;
+  }
+  .benefits__list {
+    flex-wrap: wrap;
+  }
+  .benefits__item {
+    width: 35%;
+    margin-bottom: 20px;
+  }
+  .footer__top {
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .footer__logo {
+    order: 1;
+    width: 285px;
+    max-width: 49%;
+  }
+  .footer__contacts {
+    order: 2;
+    width: 49%;
+  }
+  .footer__nav--catalog {
+    order: 3;
+  }
+  .footer__nav--info {
+    order: 4;
+  }
+  .footer__nav--catalog,
+  .footer__nav--info {
+    width: 49%;
+    margin-top: 30px;
+  }
+  .footer__menu {
+    display: none;
+  }
+  .footer__title {
+    span {
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+      
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 18px;
+        width: 30px;
+        height: 30px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        background-image: url(../img/icons/next.svg);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
