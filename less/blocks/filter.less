@@ -1,0 +1,189 @@
+.filter {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.filter__wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter__cancel {
+  width: 203px;
+  max-width: 100%;
+  height: 51px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 16px;
+  color: #8695AD;
+  border-radius: 20px;
+  background-color: rgba(134,149,173,0.1);
+  .transition();
+  
+  svg {
+    width: 24px;
+    height: 39px;
+    margin-left: 18px;
+    stroke: #8695AD;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @blue;
+    .transition();
+    
+    svg {
+      stroke: #fff;
+      .transition();
+    }
+  }
+}
+
+.filter__selection {
+  position: relative;
+  width: 181px;
+  max-width: 100%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 16.8px;
+    background-color: rgba(38,156,237,0.15);
+    background-image: url(../img/icons/down.svg);
+    background-size: 21px 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    .transition();
+  }
+  
+  &:hover::after {
+    background-color: rgba(38,156,237,0.25);
+    .transition();
+  }
+  
+  &--material {
+    width: 250px;
+  }
+}
+
+.filter__select {
+  appearance: none;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgba(255,255,255,0);
+  border-radius: 20px;
+  border: 1px solid rgba(170, 173, 179, 0.2);
+  outline: none;
+
+  option[disabled] {
+    display: none;
+  }
+  
+  &::-ms-expand {
+    color: transparent;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.filter__slider {
+  width: 296px;
+  max-width: 100%;
+  margin-right: 37px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.filter__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.filter__range {
+  width: 100%;
+  
+  .ui-slider {
+    position: relative;
+  }
+  /* Ползунок */
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #269CED;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 4px solid #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 20px;
+    border-radius: 8px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle { 
+    top: -10px;
+    margin-left: -8px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min { 
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content { 
+    border: 0;
+    background-color: rgba(134,149,173,0.3);
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header { 
+    border: 1px solid rgba(170, 173, 179, 0.2);
+    background-color: #269CED;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+    border-radius: 8px;
+  }
+  .ui-widget.ui-widget-content {
+    border: 0;
+  }
+}
