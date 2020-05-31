@@ -16,7 +16,11 @@ var enableSwiper2 = function() {
     preventClicks: false,
     preventClicksPropagation: false,
     spaceBetween: 16,
-      breakpoints: {
+    navigation: {
+      nextEl: '.clients__next',
+      prevEl: '.clients__prev',
+    },
+    breakpoints: {
       1200: {
         slidesPerView: 3,
       },
