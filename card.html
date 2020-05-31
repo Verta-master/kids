@@ -644,9 +644,16 @@
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        766: {
+          slidesPerView: 3,
+        },
+        600: {
+          slidesPerView: 2,
+        }
+      }
     });
     var galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
       navigation: {
         nextEl: '.card__next',
         prevEl: '.card__prev',
