@@ -1973,6 +1973,204 @@ h2,
 .form__btn {
   margin-top: 20px;
 }
+.filter {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.filter__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.filter__cancel {
+  width: 203px;
+  max-width: 100%;
+  height: 51px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 16px;
+  color: #8695AD;
+  border-radius: 20px;
+  background-color: rgba(134, 149, 173, 0.1);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__cancel svg {
+  width: 24px;
+  height: 39px;
+  margin-left: 18px;
+  stroke: #8695AD;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__cancel:hover,
+.filter__cancel:active {
+  color: #fff;
+  background-color: #269CED;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__cancel:hover svg,
+.filter__cancel:active svg {
+  stroke: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__selection {
+  position: relative;
+  width: 181px;
+  max-width: 100%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.filter__selection::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 16.8px;
+  background-color: rgba(38, 156, 237, 0.15);
+  background-image: url(../img/icons/down.svg);
+  background-size: 21px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__selection:hover::after {
+  background-color: rgba(38, 156, 237, 0.25);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__selection--material {
+  width: 250px;
+}
+.filter__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  border: 1px solid rgba(170, 173, 179, 0.2);
+  outline: none;
+}
+.filter__select option[disabled] {
+  display: none;
+}
+.filter__select::-ms-expand {
+  color: transparent;
+  border: none;
+  background-color: transparent;
+}
+.filter__slider {
+  width: 296px;
+  max-width: 100%;
+  margin-right: 37px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+.filter__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 26px;
+}
+.filter__range {
+  width: 100%;
+  /* Ползунок */
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  /* позиционируем ползунки */
+  /* оформление полосы по которой ходит ползунок */
+  /* оформление активного участка (между двумя ползунками) */
+  /* скругление для полосы слайдера */
+}
+.filter__range .ui-slider {
+  position: relative;
+}
+.filter__range .ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #269CED;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 4px solid #FFFFFF;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  outline: none;
+}
+.filter__range .ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  overflow: hidden;
+}
+.filter__range .ui-slider-horizontal {
+  height: 20px;
+  border-radius: 8px;
+}
+.filter__range .ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+  margin-left: -8px;
+}
+.filter__range .ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.filter__range .ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.filter__range .ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+.filter__range .ui-widget-content {
+  border: 0;
+  background-color: rgba(134, 149, 173, 0.3);
+}
+.filter__range .ui-widget-header {
+  border: 1px solid rgba(170, 173, 179, 0.2);
+  background-color: #269CED;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.filter__range .ui-corner-all {
+  border-radius: 8px;
+}
+.filter__range .ui-widget.ui-widget-content {
+  border: 0;
+}
 @media (max-width: 1200px) {
   .wrapper {
     width: 100%;
@@ -2128,14 +2326,12 @@ h2,
     height: 30px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    background-image: url(../img/icons/next.svg);
+    background-image: url(../img/icons/down.svg);
+    background-size: 21px 14px;
     background-repeat: no-repeat;
-    background-size: 20px 20px;
     background-position: center;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
   }
   .header__wrap {
     -ms-flex-wrap: wrap;
@@ -2146,6 +2342,26 @@ h2,
   .header .logo {
     width: 100%;
     margin-bottom: 10px;
+  }
+  .filter__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filter__selection {
+    width: 250px;
+    margin-right: 0;
+  }
+  .filter__slider {
+    margin-right: 0;
+  }
+  .filter__cancel {
+    width: 250px;
+    margin-left: 0;
   }
 }
 @media (max-width: 600px) {
