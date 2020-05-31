@@ -27,7 +27,7 @@
       </div>
       <div class="header__contacts">
         <a href="tel:+74999930784" class="phone">8 (499)-993-07-84</a>
-        <a href="#" class="header__call">Заказать звонок</a>
+        <a data-fancybox="" data-src="#call" href="javascript:;" class="header__call">Заказать звонок</a>
       </div>
       <form action="#" class="search">
         <input type="text" class="search__input" placeholder="Поиск по сайту">
@@ -195,9 +195,9 @@
               </a>
             </div>
           </div>
-          <div class="swiper-button-prev category__prev"></div>
-          <div class="swiper-button-next category__next"></div>
         </div>
+        <div class="swiper-button-prev category__prev"></div>
+        <div class="swiper-button-next category__next"></div>
       </div>
     </nav>
     
@@ -519,9 +519,9 @@
               </form>
             </div>
           </div>
-          <div class="swiper-button-prev catalog__prev"></div>
-          <div class="swiper-button-next catalog__next"></div>
         </div>
+        <div class="swiper-button-prev catalog__prev"></div>
+        <div class="swiper-button-next catalog__next"></div>        
       </div>
     </section>
     
@@ -597,9 +597,9 @@
               <p class="clients__text">Ключевой клиент для нашей компании, который ценит нашу продукцию</p>
             </div>
           </div>
-          <div class="swiper-button-prev clients__prev"></div>
-          <div class="swiper-button-next clients__next"></div>
         </div>
+        <div class="swiper-button-prev clients__prev"></div>
+        <div class="swiper-button-next clients__next"></div>        
       </div>
     </section>
     
@@ -645,9 +645,9 @@
               </a>
             </div>
           </div>
-          <div class="swiper-button-prev blog__prev"></div>
-          <div class="swiper-button-next blog__next"></div>
         </div>
+        <div class="swiper-button-prev blog__prev"></div>
+        <div class="swiper-button-next blog__next"></div>        
       </div>
     </section>
   </main>
@@ -677,8 +677,8 @@
             </li>
           </ul>
         </div>
-        <nav class="footer__nav">
-          <p class="footer__title">Каталог</p>
+        <nav class="footer__nav footer__nav--catalog">
+          <p class="footer__title"><span>Каталог</span></p>
           <ul class="footer__menu">
             <li class="footer__item"><a href="#">Готовые решения</a></li>
             <li class="footer__item"><a href="#">Парковое оборудование</a></li>
@@ -691,8 +691,8 @@
             <li class="footer__item"><a href="#">Теневые навесы</a></li>
           </ul>
         </nav>
-        <nav class="footer__nav">
-          <p class="footer__title">Информация</p>
+        <nav class="footer__nav footer__nav--info">
+          <p class="footer__title"><span>Информация</span></p>
           <ul class="footer__menu">
             <li class="footer__item"><a href="#">Скидки и акции</a></li>
             <li class="footer__item"><a href="#">Гарантия</a></li>
@@ -705,7 +705,7 @@
         <div class="footer__contacts">
           <a href="tel:+74999930784" class="phone">8 (499)-993-07-84</a>
           <a href="tel:+74950039721" class="phone">8 (495)-003-97-21</a>
-          <a href="#" class="footer__call">Заказать звонок</a>
+          <a data-fancybox="" data-src="#call" href="javascript:;" class="footer__call">Заказать звонок</a>
           <div class="footer__address footer__address--location">
             <b>Адрес</b>
             <address>МО, Люберцы, Красная улица 1 литера С, 140000</address>
@@ -736,7 +736,21 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Заказать звонок</p>
+    <p class="modal__subtitle">Укажите ваши контактные данные</p>
+    <form action="#" class="form">
+      <input type="text" class="form__input" placeholder="Имя" required="">
+      <input type="tel" class="form__input" placeholder="Телефон" required="">
+      <input type="checkbox" id="checkbox" class="form__checkbox">
+      <label for="checkbox" class="form__label">Я не робот</label>
+      <button type="submit" class="btn form__btn">Заказать</button>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   
