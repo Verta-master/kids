@@ -114,8 +114,10 @@
   
   <main>
     <nav class="breadcrumbs">
-      <a href="#" class="breadcrumbs__link">Главная</a>
-      <span class="breadcrumbs__link">Каталог товаров</span>
+      <div class="wrapper">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+        <span class="breadcrumbs__link">Каталог товаров</span>
+      </div>
     </nav>
     
     <section class="card">
@@ -125,27 +127,27 @@
             <div class="swiper-container gallery-top">
               <div class="swiper-wrapper">
                 <div class="swiper-slide card__slide">
-                  <a href="" class="card__img">
+                  <a data-fancybox="gallery" href="img/images/img-1big.jpg" class="card__img">
                     <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
                   </a>
                 </div>
                 <div class="swiper-slide card__slide">
-                  <a href="" class="card__img">
-                    <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
-                  </a>
-                </div>
-                <div class="swiper-slide card__slide">
-                  <a href="" class="card__img">
+                  <a data-fancybox="gallery" href="img/images/img-2.jpg" class="card__img">
                     <img src="img/images/img-2.jpg" alt="Игровой комплекс">
                   </a>
                 </div>
                 <div class="swiper-slide card__slide">
-                  <a href="" class="card__img">
+                  <a data-fancybox="gallery" href="img/images/img-1big.jpg" class="card__img">
+                    <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a data-fancybox="gallery" href="img/images/img-3.jpg" class="card__img">
                     <img src="img/images/img-3.jpg" alt="Игровой комплекс">
                   </a>
                 </div>
                 <div class="swiper-slide card__slide">
-                  <a href="" class="card__img">
+                  <a data-fancybox="gallery" href="img/images/img-1big.jpg" class="card__img">
                     <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
                   </a>
                 </div>
@@ -179,6 +181,7 @@
           <div class="card__info">
             <p class="card__title">Игровой комплекс ПАРК-012</p>
             <form action="#" class="form">
+              <p class="card__subtitle">Колличество</p>
               <div class="form__number">
                 <button type="button" class="form__num form__num--minus"></button>
                 <input type="text" class="form__value" value="10">

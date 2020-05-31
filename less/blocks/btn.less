@@ -43,3 +43,20 @@
     }
   }
 }
+
+.btn--grey {
+  background-color: rgba(134,149,173,0.1);
+  box-shadow: none;
+  background-image: none;
+  border: 0;
+  
+  &::after {
+    display: none;
+  }
+  
+  &:hover,
+  &:active {
+    background-color: #FFD14B;
+    .transition();
+  }
+}
