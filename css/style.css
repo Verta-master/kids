@@ -1044,6 +1044,7 @@ h2,
 }
 .category__link {
   display: block;
+  width: 100%;
   padding: 39px 30px;
   padding-bottom: 10px;
   font-weight: bold;
@@ -1055,6 +1056,7 @@ h2,
   transition: ease-out 0.3s;
 }
 .category__link span {
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,6 +1112,7 @@ h2,
           box-sizing: border-box;
   border-radius: 30px;
   overflow: hidden;
+  background-color: #269CED;
   background-image: url(../img/images/action-1.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1667,6 +1670,9 @@ h2,
   font-size: 14px;
   line-height: 1.2;
   border-top: 1px solid rgba(134, 149, 173, 0.1);
+}
+.footer__bottom span {
+  max-width: 100%;
 }
 .footer__top {
   padding-top: 56px;
