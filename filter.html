@@ -115,37 +115,40 @@
   <main>
     <div class="filter">
       <div class="wrapper">
-        <div class="filter__wrap">
-          <div class="filter__slider">
-            <p class="filter__title">Занимаемая площадь (м.кв.)</p>
-            <div class="filter__range">
-              <div id="slider-range">
-                <div class="ui-slider-handle"><span id="handle-min"></span></div>
-                <div class="ui-slider-handle"><span id="handle-max"></span></div>
+        <button type="button" class="btn filter__btn">Фильтр товаров</button>
+        <div class="filter__drop">
+          <div class="filter__wrap">
+            <div class="filter__slider">
+              <p class="filter__title">Занимаемая площадь (м.кв.)</p>
+              <div class="filter__range">
+                <div id="slider-range">
+                  <div class="ui-slider-handle"><span id="handle-min"></span></div>
+                  <div class="ui-slider-handle"><span id="handle-max"></span></div>
+                </div>
               </div>
             </div>
+            <div class="filter__selection">
+              <select class="filter__select">
+                <option value="" selected disabled>Возраст</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+            <div class="filter__selection filter__selection--material">
+              <select class="filter__select">
+                <option value="" selected disabled>Материал</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+            <button type="button" class="filter__cancel">
+              <span>Сбросить фильтр</span>
+              <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.3391 27.0711L12.268 20L5.19698 27.0711" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.19702 12.0711L12.2681 19.1421L19.3392 12.0711" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
-          <div class="filter__selection">
-            <select class="filter__select">
-              <option value="" selected disabled>Возраст</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-          <div class="filter__selection filter__selection--material">
-            <select class="filter__select">
-              <option value="" selected disabled>Материал</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-          <button type="button" class="filter__cancel">
-            <span>Сбросить фильтр</span>
-            <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.3391 27.0711L12.268 20L5.19698 27.0711" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M5.19702 12.0711L12.2681 19.1421L19.3392 12.0711" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
         </div>
       </div>
     </div>
@@ -254,5 +257,14 @@
   <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/filter.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  
+  <!--  Filter-->
+  <script>
+    if (window.innerWidth < 1200) {
+      $('.filter__btn').click(function() {
+        $('.filter__drop').slideToggle();
+      });
+    }
+  </script>
 </body>
 </html>
