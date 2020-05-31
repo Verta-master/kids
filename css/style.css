@@ -2129,6 +2129,18 @@ h2,
   cursor: pointer;
   outline: none;
 }
+.filter__range .ui-slider .ui-slider-handle span {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: #8695AD;
+}
 .filter__range .ui-slider .ui-slider-range {
   position: absolute;
   z-index: 1;
