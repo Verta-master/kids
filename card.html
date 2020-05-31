@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>MafStore</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <svg style="display:none">
+    <symbol id="icon-basket">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5263 7.80741H13.4319V1.4381C13.4319 0.696683 12.8219 0.0960693 12.0696 0.0960693C11.3172 0.0960693 10.7073 0.697168 10.7073 1.4381V7.80741H1.52182C0.665421 7.80741 0 8.50659 0 9.39755V10.3987C0 11.1936 0.476754 11.7898 1.14356 11.9889C1.80251 14.6763 3.42282 20.7587 3.70999 21.5618C3.99021 22.5552 4.93725 23.35 6.17884 23.35C7.41304 23.35 12.0696 23.35 12.0696 23.35C12.0696 23.35 16.6281 23.35 17.8623 23.35C19.1039 23.35 20.1494 22.5547 20.4297 21.5618C20.6262 20.7587 22.2391 14.6763 22.9961 11.9889C23.6629 11.7898 24.1396 11.194 24.1396 10.3987V9.39755C24.1392 8.50659 23.3822 7.80741 22.5263 7.80741ZM9.11562 19.8604C9.11562 20.4645 8.73598 20.8621 8.16859 20.8621C7.69183 20.8621 7.31311 20.4645 7.31311 19.8604V13.1843C7.31311 12.691 7.69183 12.1904 8.16859 12.1904C8.73598 12.1904 9.11562 12.691 9.11562 13.1843V19.8604ZM12.8256 19.8604C12.8256 20.4645 12.4473 20.8621 11.8786 20.8621C11.4018 20.8621 11.0231 20.4645 11.0231 19.8604V13.1843C11.0231 12.691 11.4018 12.1904 11.8786 12.1904C12.4469 12.1904 12.8256 12.691 12.8256 13.1843V19.8604ZM16.5356 19.8604C16.5356 20.4645 16.0588 20.8621 15.5816 20.8621C15.1049 20.8621 14.6277 20.4645 14.6277 19.8604V13.1843C14.6277 12.691 15.1044 12.1904 15.5816 12.1904C16.0584 12.1904 16.5356 12.691 16.5356 13.1843V19.8604Z"/>
+    </symbol>
+    <symbol id="icon-search">
+      <path d="M12.785 13.2262C13.8881 12.1231 14.4396 10.7987 14.4396 9.25276C14.4396 7.70686 13.8881 6.38658 12.785 5.29191C11.6904 4.18889 10.3701 3.63738 8.82418 3.63738C7.27827 3.63738 5.95381 4.18889 4.85079 5.29191C3.75612 6.38658 3.20879 7.70686 3.20879 9.25276C3.20879 10.7987 3.75612 12.1231 4.85079 13.2262C5.95381 14.3208 7.27827 14.8682 8.82418 14.8682C10.3701 14.8682 11.6904 14.3208 12.785 13.2262ZM20.8571 19.6813C20.8571 20.1159 20.6984 20.4919 20.3808 20.8094C20.0633 21.127 19.6873 21.2857 19.2527 21.2857C18.8015 21.2857 18.4255 21.127 18.1247 20.8094L13.8254 16.5227C12.3296 17.5589 10.6625 18.0769 8.82418 18.0769C7.62924 18.0769 6.48443 17.8471 5.38977 17.3876C4.30346 16.9196 3.36338 16.2929 2.56954 15.5074C1.78405 14.7136 1.15734 13.7735 0.689389 12.6872C0.229796 11.5925 0 10.4477 0 9.25276C0 8.05782 0.229796 6.9172 0.689389 5.83089C1.15734 4.73622 1.78405 3.79615 2.56954 3.01066C3.36338 2.21682 4.30346 1.5901 5.38977 1.13051C6.48443 0.662563 7.62924 0.428589 8.82418 0.428589C10.0191 0.428589 11.1597 0.662563 12.2461 1.13051C13.3407 1.5901 14.2808 2.21682 15.0663 3.01066C15.8601 3.79615 16.4868 4.73622 16.9464 5.83089C17.4144 6.9172 17.6484 8.05782 17.6484 9.25276C17.6484 11.0911 17.1303 12.7582 16.0941 14.254L20.3934 18.5532C20.7026 18.8624 20.8571 19.2385 20.8571 19.6813Z"/>
+    </symbol>
+  </svg>
+  
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <div class="logo">
+        <img src="img/images/logo.png" alt="Logo">
+        <strong>Детское спортивное и игровое оборудование</strong>
+      </div>
+      <div class="header__contacts">
+        <a href="tel:+74999930784" class="phone">8 (499)-993-07-84</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="header__call">Заказать звонок</a>
+      </div>
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Поиск по сайту">
+        <button type="submit" class="search__btn">
+          <svg width="21" height="22" viewBox="0 0 21 22">
+            <use href="#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <a href="#" class="header__basket">
+        <div class="header__icon">
+          <svg width="25" height="24" viewBox="0 0 25 24">
+            <use href="#icon-basket"></use>
+          </svg>
+          <span class="header__number">10</span>
+        </div>
+        <div class="header__title"><span>Корзина</span><b class="header__price">5 870 Р</b></div>
+      </a>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="wrapper menu__wrap">
+      <div class="nav">
+        <button type="button" class="nav__btn">Каталог  товаров</button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Готовые решения</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Парковое оборудование</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Спортивные площадки</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Канатные лазы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Качели</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Горкир</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Теневые навесы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Беседки</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Песочницы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">...</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="menu__btn"></button>
+      <ul class="menu__list">
+        <li class="menu__item menu__item--active">
+          <a href="#" class="menu__link">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">О магазине</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Доставка и оплата</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Статьи</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Гарантия</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Скидки и акции</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <nav class="breadcrumbs">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__link">Каталог товаров</span>
+    </nav>
+    
+    <section class="card">
+      <div class="wrapper">
+        <div class="card__wrap">
+          <div class="card__slider">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card__slide">
+                  <a href="" class="card__img">
+                    <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a href="" class="card__img">
+                    <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a href="" class="card__img">
+                    <img src="img/images/img-2.jpg" alt="Игровой комплекс">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a href="" class="card__img">
+                    <img src="img/images/img-3.jpg" alt="Игровой комплекс">
+                  </a>
+                </div>
+                <div class="swiper-slide card__slide">
+                  <a href="" class="card__img">
+                    <img src="img/images/img-1big.jpg" alt="Игровой комплекс">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card__gallery">
+              <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide card__thumb">
+                    <img src="img/images/img-1.jpg" alt="Игровой комплекс">
+                  </div>
+                  <div class="swiper-slide card__thumb">
+                    <img src="img/images/img-2.jpg" alt="Игровой комплекс">
+                  </div>
+                  <div class="swiper-slide card__thumb">
+                    <img src="img/images/img-1.jpg" alt="Игровой комплекс">
+                  </div>
+                  <div class="swiper-slide card__thumb">
+                    <img src="img/images/img-3.jpg" alt="Игровой комплекс">
+                  </div>
+                  <div class="swiper-slide card__thumb">
+                    <img src="img/images/img-1.jpg" alt="Игровой комплекс">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev card__prev"></div>
+              <div class="swiper-button-next card__next"></div>
+            </div>
+          </div>
+          
+          <div class="card__info">
+            <p class="card__title">Игровой комплекс ПАРК-012</p>
+            <form action="#" class="form">
+              <div class="form__number">
+                <button type="button" class="form__num form__num--minus"></button>
+                <input type="text" class="form__value" value="10">
+                <button type="button" class="form__num form__num--plus"></button>
+              </div>
+              <div class="card__price">1 800 000р.</div>
+              <a href="#" class="btn btn--grey card__buy">Добавить в корзину</a>
+              <a href="#" class="btn card__click">Купить в 1 клик</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="tabs" id="tabs">
+      <div class="wrapper">
+        <div class="tabs__block">
+          <ul class="tabs__title">
+            <li class="tabs__name"><a href="#tabs-1">Описание</a></li>
+            <li class="tabs__name"><a href="#tabs-2">Характеристики</a></li>
+            <li class="tabs__name"><a href="#tabs-3">Сертификаты</a></li>
+          </ul>
+          <div class="tabs__field" id="tabs-1">
+            <p>Никола Тесла родился 10 июля 1856 года в селе Смиляны (Хорватия). Ребёнок посещал гимназию в Карлштате, хорошо учился, но рос слабым и нерешительным. Уже тогда у него стали проявляться некоторые странности в восприятии окружающей действительности. При взгляде на жемчуг у Теслы случалось некое подобие приступа, персики приводили его к лихорадке. Стоило ему посмотреть на то, как в воду опускают прямоугольные листы бумаги, как во рту появлялся странный привкус.</p>
+            <p>Отец Николы — Милутин Тесла, сербский православный священник, мечтал о духовной карьере для своего сына. Последний, напротив, испытывал необъяснимую тягу к естественным наукам. Понимая это, отец строго-настрого запретил мальчику поступать в политехнический институт в Граце. Вскоре Никола тяжело заболел. Врачи сообщили отцу, что ребёнок может не выжить. Убитый горем Милутин, желая ободрить сына, официально разрешил ему поступить в институт. Некоторое время спустя юный Тесла выздоровел. Вернее, не совсем. После перенесённой болезни у него стали появляться видения, сопровождавшиеся вспышками света.</p>
+          </div>
+          <div class="tabs__field" id="tabs-2">
+            Характеристики
+          </div>
+          <div class="tabs__field" id="tabs-3">
+            Сертификаты
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="catalog">
+      <div class="wrapper">
+        <p class="title">Похожие товары</p>
+        <div class="swiper-container catalog__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-1.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-2.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-1.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-3.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-1.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-2.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-1.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+            <div class="swiper-slide catalog__slide">
+              <div class="catalog__labels">
+                <span class="catalog__label">ХИТ</span>
+              </div>
+              <a href="#" class="catalog__link">
+                <figure class="catalog__img">
+                  <img src="img/images/img-3.jpg" alt="Игровой комплекс ПАРК-012">
+                </figure>
+                <p class="catalog__title">Игровой комплекс ПАРК-012</p>
+              </a>
+              <table class="catalog__table">
+                <tr>
+                  <td>Размер</td>
+                  <td>12.60 х 10 х 7.90 м</td>
+                </tr>
+                <tr>
+                  <td>Возраст</td>
+                  <td>6-14</td>
+                </tr>
+                <tr>
+                  <td>Материал</td>
+                  <td>BADI, ПНД, металл</td>
+                </tr>
+              </table>
+              <form action="#" class="catalog__form">
+                <p class="catalog__price">1 800 000р.</p>
+                <a href="#" class="catalog__shop" title="Купить">
+                  <svg width="25" height="24" viewBox="0 0 25 24">
+                    <use href="#icon-basket"></use>
+                  </svg>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev catalog__prev"></div>
+        <div class="swiper-button-next catalog__next"></div>        
+      </div>
+    </section>
+    
+    <section class="benefits">
+      <div class="wrapper">
+        <div class="benefits__block">
+          <p class="title">Наши преимущества</p>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <figure class="benefits__icon">
+                <img src="img/icons/benefits-1.png" alt="Наши преимущества">
+              </figure>
+              <p class="benefits__title">Качество</p>
+              <span>Антивандальное исполнение конструкций, предназначенное для интенсивной эксплуатации.</span>
+            </li>
+            <li class="benefits__item">
+              <figure class="benefits__icon">
+                <img src="img/icons/benefits-2.png" alt="Наши преимущества">
+              </figure>
+              <p class="benefits__title">Срок службы</p>
+              <span>Используемые в производстве материалы позволяют эксплуатировать оборудование до 12 лет</span>
+            </li>
+            <li class="benefits__item">
+              <figure class="benefits__icon">
+                <img src="img/icons/benefits-3.png" alt="Наши преимущества">
+              </figure>
+              <p class="benefits__title">Сроки поставки</p>
+              <span>Максимально сжатые сроки отгрузки или поставки товара, в течении 1-5 дней.</span>
+            </li>
+            <li class="benefits__item">
+              <figure class="benefits__icon">
+                <img src="img/icons/benefits-4.png" alt="Наши преимущества">
+              </figure>
+              <p class="benefits__title">Гарантия</p>
+              <span>На изделия и комплексы от 1 до 3 лет, исключая случаи вандализма.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <div class="logo">
+            <img src="img/images/logo.png" alt="Logo">
+            <strong>Детское спортивное и игровое оборудование</strong>
+          </div>
+          <span>«МафСтор» ведет свою деятельность на  рынке оборудования для городской среды. Разрабатываем дизайн, проектируем и изготовливаем городскую мебель, системы городского освещения и арт-объекты.</span>
+          
+          <ul class="payment">
+            <li class="payment__item">
+              <img src="img/images/payment-1.png" alt="Visa">
+            </li>
+            <li class="payment__item">
+              <img src="img/images/payment-2.png" alt="MasterCard">
+            </li>
+            <li class="payment__item">
+              <img src="img/images/payment-3.png" alt="Wallet">
+            </li>
+            <li class="payment__item">
+              <img src="img/images/payment-4.png" alt="Mir">
+            </li>
+          </ul>
+        </div>
+        <nav class="footer__nav footer__nav--catalog">
+          <p class="footer__title"><span>Каталог</span></p>
+          <ul class="footer__menu">
+            <li class="footer__item"><a href="#">Готовые решения</a></li>
+            <li class="footer__item"><a href="#">Парковое оборудование</a></li>
+            <li class="footer__item"><a href="#">Спортивные площадки</a></li>
+            <li class="footer__item"><a href="#">Канатные лазы</a></li>
+            <li class="footer__item"><a href="#">Качели</a></li>
+            <li class="footer__item"><a href="#">Горки</a></li>
+            <li class="footer__item"><a href="#">Беседки</a></li>
+            <li class="footer__item"><a href="#">Песочницы</a></li>
+            <li class="footer__item"><a href="#">Теневые навесы</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__nav footer__nav--info">
+          <p class="footer__title"><span>Информация</span></p>
+          <ul class="footer__menu">
+            <li class="footer__item"><a href="#">Скидки и акции</a></li>
+            <li class="footer__item"><a href="#">Гарантия</a></li>
+            <li class="footer__item"><a href="#">Статьи</a></li>
+            <li class="footer__item"><a href="#">Доставка и оплата</a></li>
+            <li class="footer__item"><a href="#">О магазине</a></li>
+            <li class="footer__item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <a href="tel:+74999930784" class="phone">8 (499)-993-07-84</a>
+          <a href="tel:+74950039721" class="phone">8 (495)-003-97-21</a>
+          <a data-fancybox data-src="#call" href="javascript:;" class="footer__call">Заказать звонок</a>
+          <div class="footer__address footer__address--location">
+            <b>Адрес</b>
+            <address>МО, Люберцы, Красная улица 1 литера С, 140000</address>
+          </div>
+          <div class="footer__address footer__address--email">
+            <b>Email</b>
+            <a href="mailto:sales@mafstore.ru">sales@mafstore.ru</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>Все права защищены © 2015 - 2020 гг. ООО "МАФСТОР"</span>
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--in" title="Instagram"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--fb" title="Facebook"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--ok" title="Odnoklassniki"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vk" title="VKontakte"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Заказать звонок</p>
+    <p class="modal__subtitle">Укажите ваши контактные данные</p>
+    <form action="#" class="form">
+      <input type="text" class="form__input" placeholder="Имя" required>
+      <input type="tel" class="form__input" placeholder="Телефон" required>
+      <input type="checkbox" id="checkbox" class="form__checkbox">
+      <label for="checkbox" class="form__label">Я не робот</label>
+      <button type="submit" class="btn form__btn">Заказать</button>
+    </form>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  
+  <!-- Sliders -->
+  <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.card__next',
+        prevEl: '.card__prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+    
+    var mySwiper = new Swiper ('.action__slider', {
+      pagination: {
+        el: '.action__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.action__next',
+        prevEl: '.action__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 2,
+      spaceBetween: 30,
+      breakpoints: {
+        766: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  </script>
+</body>
+</html>
