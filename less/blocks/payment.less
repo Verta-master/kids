@@ -3,7 +3,16 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -18px;
+//  margin-right: -18px;
+  
+  &--basket {
+    .payment__item {
+      margin-right: 15px;
+      border: 1px solid rgba(134, 149, 173, 0.1);
+      border-radius: 12px;
+      box-shadow: none;
+    }
+  }
 }
 
 .payment__item {
@@ -23,5 +32,9 @@
     display: block;
     flex: 0 0 auto;
     max-height: 20px;
+  }
+  
+  &:nth-child(4n) {
+    margin-right: 0;
   }
 }
