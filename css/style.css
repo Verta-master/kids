@@ -2503,6 +2503,9 @@ span.breadcrumbs__link {
 .basket .title {
   margin-top: 0;
 }
+.basket__form {
+  width: 100%;
+}
 .basket__table {
   width: 870px;
   max-width: 100%;
@@ -2821,6 +2824,11 @@ span.breadcrumbs__link {
   .filter__title {
     text-align: center;
   }
+  .basket__data {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media (max-width: 1022px) {
   .action__link {
@@ -2915,6 +2923,56 @@ span.breadcrumbs__link {
     width: 100%;
     margin-bottom: 30px;
   }
+  .basket__table {
+    width: 100%;
+  }
+  .basket__img,
+  .basket__remove {
+    padding: 10px;
+  }
+}
+@media (max-width: 766px) {
+  .basket__table,
+  .basket__table tbody,
+  .basket__table td {
+    display: block;
+  }
+  .basket__table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  .basket__wrap {
+    margin-top: 0;
+  }
+  .basket__img {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .basket__title {
+    padding: 0;
+    margin-bottom: 10px;
+    width: calc(100% - 150px);
+  }
+  .basket__price,
+  .basket__number {
+    width: auto;
+  }
+  .basket__remove {
+    padding: 0;
+  }
 }
 @media (max-width: 600px) {
   .catalog__price {
@@ -2961,6 +3019,8 @@ span.breadcrumbs__link {
   .blog__prev {
     margin-top: -80px;
   }
+  .basket__data,
+  .basket__data .form__btn,
   .footer__logo,
   .footer__nav--catalog,
   .footer__nav--info,
@@ -3011,5 +3071,21 @@ span.breadcrumbs__link {
   }
   .card__img img {
     max-height: 200px;
+  }
+  .basket__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .basket__title {
+    width: 100%;
+    text-align: center;
+  }
+  .basket__number {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .basket__number .form__number {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
